@@ -1,48 +1,36 @@
-
 <body>
     <script>
+        var age = prompt("Please enter your age:");
+        var maxAge = prompt("Please enter the maximum age you want to live:");
+        var numPerDay = prompt("Please enter the number you eat per day:");
 
-        var age = 0;
-        var maxAge = 0;
-        var numPerDay = 0;
+        var confirmAge = prompt("Are you sure this is your age? Type yes or no");
+        if (confirmAge == "yes") {
+            console.log("Thanks");
+        } else {
+            console.log("Run code again");
+        }
 
+        var confirmMaxAge = prompt("Are you sure this is the max age you want to live? Type yes or no");
+        if (confirmMaxAge == "yes") {
+            console.log("Thanks");
+        } else {
+            console.log("Run code again");
+        }
 
-        var age = prompt("Please enter your age : ");
-    
-        var maxAge = prompt("Please enter your maximum age you want to live : ");
+        var confirmNum = prompt("Are you sure this is the number you eat per day? Type yes or no");
+        if (confirmNum == "yes") {
+            console.log("Thanks");
 
-        var numPerDay = prompt("Please enter your number per day : ");
+            var ageNum = Number(age);
+            var maxAgeNum = Number(maxAge);
+            var numPerDayNum = Number(numPerDay);
 
-        if result = confirm("Are you sure this is your age?)
-            if (age == true) {
-            console.log("Thanks")
-            } 
-            else {
-            console.log ("Run code again")
-            }
+            var totalRequired = numPerDayNum * 365 * (maxAgeNum - ageNum);
 
-        if result = confirm("Are you sure this is the max age you want to live?")
-            if (age == true) {
-            console.log("Thanks")
-            } 
-            else {
-            console.log ("Run code again")
-            }
-
-        if result = confirm("Are you sure this is number you eat per day?")
-            if (age == true) {
-            console.log("Thanks") 
-            totalRequired = (numPerDay * 365) * (maxAge - age);
-            console.log("You will need " + totalRequired + " to last you until the ripe old age of " + maxAge);
-            } 
-            else {
-            console.log ("Run code again")
-            }
-
-
-
-        
-
+            document.write("You will need " + totalRequired + " to last you until the ripe old age of " + maxAgeNum);
+        } else {
+            alert("Run code again");
+        }
     </script>
-
 </body>
