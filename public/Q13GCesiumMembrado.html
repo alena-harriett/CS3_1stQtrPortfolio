@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h2> q1 3rd graded exercise </h2>
+    <h3> submitted by membrado of 9- cesium </h3> 
+
+  <p> Guess the number: **** </p>
+  <p> The number is from 1 to 100 </p>
+
+  <label> Enter your guess: <input id = "guessInput" type = "number" /> </label> <br> <br>
+  <button onclick = "checkIt()"> Check It </button><br><br>
+  <span id = "result"> </span>
+
+  <script>
+    var dNumber = Math.floor(Math.random() * 100) + 1;
+
+    function checkIt() {
+      var guess = parseInt(document.getElementById("guessInput").value);
+      var result = document.getElementById("result");
+
+      if (isNaN(guess)) {
+        result.innerHTML = "Please enter a valid number.";
+      } else if (guess < dNumber) {
+        result.innerHTML = "Higher";
+      } else if (guess > dNumber) {
+        result.innerHTML = "Lower";
+      } else {
+        result.innerHTML = "You are correct!";
+      }
+    }
+  </script>
+  <footer>
+        <br> <br>
+        <h4> References: </h4>
+        <p>  ⋆ W3Schools.com. (n.d.). </p>
+        <p> https://www.w3schools.com/Js/js_if_else.asp></p>
+        <p>  ⋆ Previous CS Online Discussion on If Else </p>
+    </footer>
+
+</body>
+</html>
