@@ -1,0 +1,54 @@
+process.stdin.on('data', input => {
+  let greeting = input.toString().trim();
+
+  switch (greeting) {
+    case "HELLO":
+    case "Hello":
+    case "hello": {
+      console.log("ENGLISH");
+      break;
+    }
+    case "MABUHAY":
+    case "Mabuhay":
+    case "mabuhay": {
+      console.log("TAGALOG");
+      break;
+    }
+    case "HOLA":
+    case "Hola":
+    case "hola": {
+      console.log("SPANISH");
+      break;
+    }
+    case "HALLO":
+    case "Hallo":
+    case "hallo": {
+      console.log("GERMAN");
+      break;
+    }
+    case "BONJOUR":
+    case "Bonjour":
+    case "bonjour": {
+      console.log("FRENCH");
+      break;
+    }
+    case "CIAO":
+    case "Ciao":
+    case "ciao": {
+      console.log("ITALIAN");
+      break;
+    }
+    case "ZDRAVSTUJTE":
+    case "Zdravstujte":
+    case "ddravstujte": {
+      console.log("RUSSIAN");
+      break;
+    }
+    default: {
+      console.log("UNKNOWN");
+    }
+  }
+    
+  process.exit();
+
+});
